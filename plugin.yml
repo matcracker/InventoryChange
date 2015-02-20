@@ -1,0 +1,5 @@
+name: InventoryChange
+main: InventoryChange\InventoryChange\InventoryChange
+version: 0.0.3
+api: [1.6.0]
+author: matcracker
