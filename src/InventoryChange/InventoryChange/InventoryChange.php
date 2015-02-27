@@ -22,7 +22,7 @@ class InventoryChange extends PluginBase implements Listener{
 			""
 		));
 		$this->loadYml();
-		$this->SaveYml()
+		$this->saveYml()
 		$this->gmc = [];
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
