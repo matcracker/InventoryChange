@@ -11,12 +11,26 @@ use pocketmine\event\player\PlayerGameModeChangeEvent;
 class InventoryChange extends PluginBase implements Listener{
 
 	public function onEnable(){
+		$this->getLogger()->info(TextFormat::GREEN."InventoryChange is activated.");
+		new Config($this->getDataFolder() . "config.yml", CONFIG::YAML, array(
+			"#For one inventory for world"
+			"Support Multi-World Inventory" => true			//Don't Work
+			""
+			"#If enabled, write in what worlds you want to have the same inventory."
+			"#Example: [SameInventoryWorld]: world, world2, world3, etc... (Separate with comma!!!)"
+			"[SameInventoryWorld]: "
+			""
+		));
 		$this->loadYml();
-		$this->saveYml();
+		$this->SaveYml()
 		$this->gmc = [];
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
-
+	
+	public function onDisable(){
+		$this->getLogger()->info(TextFormat::RED."InventoryChange is disabled.");
+	}
+	
  	public function onPlayerMove(PlayerMoveEvent $event){
 		$p = $event->getPlayer();
 		if($p->isCreative()) return;
