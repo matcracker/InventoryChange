@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 use pocketmine\item\Item;
+use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerGameModeChangeEvent;
 class InventoryChange extends PluginBase implements Listener{
