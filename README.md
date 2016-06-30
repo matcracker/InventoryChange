@@ -1,4 +1,6 @@
-# InventoryChange
+# InventoryChange **[OUTDATED]**
+Use InventoryExchanger (https://github.com/matcracker/InventoryExchanger) instead this.
+
 InventoryChange is a plugin that allows you to change inventory when you change the world.
 
 Its use is very simple.
